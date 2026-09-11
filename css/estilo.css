@@ -1,0 +1,180 @@
+/* Configurações gerais */
+:root {
+    --cor-principal: #1a6977; /* Guarda o azul principal em uma variável reutilizável */
+    --cor-secundaria: #3978cae3; /* Guarda o azul-claro usado nos destaques */
+    --cor-texto: #000103e1; /* Define a cor-padrão dos textos */
+    --cor-fundo: #4c7ee2; /* Define a cor do fundo da página */
+    --cor-branca: #eeeeee; /* Guarda o branco usado em diferentes elementos */
+    --sombra: 0 4px 14px rgba(0, 0, 0, 0.08); /* Cria uma sombra suave reutilizável */
+}
+
+/* Seleciona todos os elementos da página */
+* {
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
+}
+
+/* Seleciona o elemento raiz do documento */
+html {
+    scroll-behavior: smooth; /* Suaviza a rolagem ao clicar nos links do menu */
+}
+
+/* Aplica configurações ao corpo inteiro da página */
+body {
+    margin: 0; /* Remove a margem que o navegador adiciona automaticamente */
+    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes e alternativas */
+    line-height: 1.6; /* Aumenta o espaço entre as linhas para facilitar a leitura */
+    color: var(--cor-texto); /* Usa a variável como cor do texto */
+    background-color: var(--cor-fundo); /* Aplica a cor de fundo armazenada na variável */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex; /* Coloca a foto e os textos lado a lado */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza o conjunto horizontalmente */
+    gap: 24px; /* Cria espaço entre a foto e os textos */
+    padding: 48px 20px; /* Adiciona 48 px na vertical e 20 px na horizontal */
+    color: var(--cor-branca); /* Deixa o texto branco */
+    background: linear-gradient(135deg, #356bd8de, var(--cor-principal)); /* Cria um fundo em degradê */
+}
+
+.cabecalho h1 {
+    margin: 0; /* Remove a margem-padrão do título */
+    font-size: 2.4rem; /* Define o título com 2,4 vezes o tamanho-base da fonte */
+}
+
+.cabecalho p {
+    margin: 4px 0; /* Adiciona 4 px acima e abaixo e remove as margens laterais */
+}
+
+.cargo {
+    font-size: 1.2rem; /* Deixa o cargo um pouco maior que o texto normal */
+    font-weight: bold; /* Exibe o cargo em negrito */
+}
+
+.foto-perfil {
+    width: 150px; /* Define a largura da foto */
+    height: 150px; /* Define a altura da foto */
+    object-fit: cover; /* Preenche a área sem distorcer a imagem */
+    border: 5px solid var(--cor-branca); /* Adiciona uma borda branca contínua */
+    border-radius: 50%; /* Transforma a imagem quadrada em um círculo */
+}
+
+/* Navegação */
+.menu {
+    position: sticky; /* Mantém o menu visível durante a rolagem */
+    top: 0; /* Fixa o menu junto ao topo quando ele passa por essa posição */
+    display: flex; /* Organiza os links com Flexbox */
+    justify-content: center; /* Centraliza os links horizontalmente */
+    flex-wrap: wrap; /* Permite que os links passem para outra linha */
+    gap: 8px; /* Cria espaço entre os links */
+    padding: 12px; /* Adiciona espaço interno ao menu */
+    background-color: var(--cor-branca); /* Define o fundo branco */
+    box-shadow: var(--sombra); /* Aplica a sombra guardada na variável */
+}
+
+.menu a {
+    padding: 8px 12px; /* Aumenta a área interna clicável dos links */
+    color: var(--cor-principal); /* Aplica o azul principal ao texto */
+    font-weight: bold; /* Deixa os links em negrito */
+    text-decoration: none; /* Remove o sublinhado-padrão */
+    border-radius: 6px; /* Arredonda os cantos do link */
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: var(--cor-branca); /* Deixa o texto branco ao passar o mouse ou usar o teclado */
+    background-color: var(--cor-principal); /* Colore o fundo do link em interação */
+}
+
+/* Conteúdo */
+.conteudo {
+    width: min(900px, 92%); /* Usa no máximo 900 px ou 92% da tela, o que for menor */
+    margin: 32px auto; /* Cria espaço vertical e centraliza o conteúdo */
+}
+
+.cartao {
+    margin-bottom: 24px; /* Separa um cartão do seguinte */
+    padding: 28px; /* Cria espaço entre o conteúdo e as bordas */
+    background-color: var(--cor-branca); /* Deixa o fundo do cartão branco */
+    border-left: 5px solid var(--cor-principal); /* Cria a faixa azul à esquerda */
+    border-radius: 10px; /* Arredonda os cantos do cartão */
+    box-shadow: var(--sombra); /* Aplica uma sombra suave */
+}
+
+.cartao h2 {
+    margin-top: 0; /* Remove o espaço acima do título do cartão */
+    color: var(--cor-principal); /* Deixa o título azul */
+}
+
+.cartao h3 {
+    margin-bottom: 4px; /* Reduz o espaço abaixo do subtítulo */
+}
+
+.lista-habilidades {
+    display: flex; /* Organiza as habilidades lado a lado */
+    flex-wrap: wrap; /* Leva os itens excedentes para a próxima linha */
+    gap: 10px; /* Define a distância entre os itens */
+    padding: 0; /* Remove o recuo-padrão da lista */
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+.lista-habilidades li {
+    padding: 7px 12px; /* Cria espaço interno em cada habilidade */
+    color: #515d80; /* Define um azul-escuro para o texto */
+    background-color: var(--cor-secundaria); /* Aplica um fundo azul-claro */
+    border-radius: 20px; /* Deixa cada item com formato de cápsula */
+}
+
+a {
+    color: var(--cor-principal); /* Define a cor de todos os links da página */
+}
+
+address {
+    font-style: normal; /* Remove o itálico aplicado por padrão ao endereço */
+}
+
+button {
+    padding: 10px 18px; /* Aumenta a área interna do botão */
+    color: var(--cor-branca); /* Deixa o texto do botão branco */
+    font-size: 1rem; /* Mantém a fonte no tamanho-base da página */
+    cursor: pointer; /* Mostra o cursor de clique sobre o botão */
+    background-color: var(--cor-principal); /* Deixa o fundo do botão azul */
+    border: 0; /* Remove a borda-padrão do navegador */
+    border-radius: 6px; /* Arredonda os cantos do botão */
+}
+
+button:hover,
+button:focus {
+    background-color: #102661; /* Escurece o botão durante a interação */
+}
+
+.mensagem {
+    min-height: 24px; /* Reserva espaço mesmo antes de existir uma mensagem */
+    font-weight: bold; /* Destaca a mensagem em negrito */
+}
+
+/* Rodapé */
+.rodape {
+    padding: 20px; /* Cria espaço interno no rodapé */
+    color: var(--cor-branca); /* Deixa o texto branco */
+    text-align: center; /* Centraliza o texto */
+    background-color: #273657; /* Aplica um fundo azul quase preto */
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    /* Estas regras só são aplicadas em telas com até 600 px de largura */
+    .cabecalho {
+        flex-direction: column; /* Coloca a foto acima dos textos */
+        text-align: center; /* Centraliza os textos do cabeçalho */
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem; /* Reduz o título para caber melhor na tela */
+    }
+
+    .cartao {
+        padding: 20px; /* Reduz o espaço interno dos cartões */
+    }
+}

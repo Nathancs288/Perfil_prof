@@ -1,0 +1,135 @@
+<!-- Informa ao navegador que este documento usa o padrão HTML5 -->
+<!DOCTYPE html>
+<!-- Inicia o documento e define o português do Brasil como idioma principal -->
+<html lang="pt-BR">
+<!-- Reúne configurações e informações sobre a página -->
+<head>
+    <!-- Permite exibir corretamente acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+    <!-- Faz a largura da página acompanhar a tela de celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fornece aos buscadores uma descrição resumida da página -->
+    <meta name="description" content="Currículo profissional de Ana Silva">
+    <!-- Define o texto exibido na aba do navegador -->
+    <title>Ana Silva | Perfil Profissional</title>
+
+    <!-- Conecta o arquivo CSS à página -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<!-- Inicia todo o conteúdo visível da página -->
+<body>
+    <!-- Cria o cabeçalho; a classe permite estilizar esta área no CSS -->
+    <header class="cabecalho">
+        <!-- Exibe a foto e fornece uma descrição alternativa para acessibilidade -->
+        <img class="foto-perfil" src="imagens/image.jpg"
+             alt="Foto profissional de Ana Silva">
+
+        <!-- Agrupa o nome, o cargo e a localização -->
+        <div>
+            <!-- Define o título principal da página -->
+            <h1>Ana Silva</h1>
+            <!-- Exibe o cargo; a classe permite aplicar um estilo específico -->
+            <p class="cargo">Estudante de Desenvolvimento Web</p>
+            <!-- Exibe a localização em um parágrafo -->
+            <p>Rio de Janeiro, RJ</p>
+        </div>
+    </header>
+
+    <!-- Cria o menu e dá a ele um nome compreensível para leitores de tela -->
+    <nav class="menu" aria-label="Navegação principal">
+        <!-- Cada link leva à seção que possui o id indicado depois de # -->
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Delimita o conteúdo principal do documento -->
+    <main class="conteudo">
+        <!-- Cria a seção Sobre; o id é o destino do primeiro link do menu -->
+        <section id="sobre" class="cartao">
+            <!-- Define o título desta seção -->
+            <h2>Sobre mim</h2>
+            <!-- Apresenta o resumo profissional em um parágrafo -->
+            <p>
+                Sou estudante de desenvolvimento web, interessado em criar páginas
+                acessíveis, organizadas e fáceis de usar. Procuro oportunidades para
+                aprender, colaborar em equipe e desenvolver minha carreira na área de tecnologia.
+            </p>
+        </section>
+
+        <section id="formacao" class="cartao">
+            <h2>Formação acadêmica</h2>
+
+            <!-- Representa um curso que pode ser entendido de forma independente -->
+            <article>
+                <h3>Curso de Desenvolvimento Web</h3>
+                <p>Universidade Exemplo — 2026</p>
+                <p>Conteúdos: HTML5, CSS3, JavaScript e fundamentos da web.</p>
+            </article>
+        </section>
+
+        <section id="experiencia" class="cartao">
+            <h2>Experiências e projetos</h2>
+
+            <article>
+                <h3>Projeto: página de perfil profissional</h3>
+                <!-- Marca 2026 como uma informação de tempo compreensível por máquinas -->
+                <p><time datetime="2026">2026</time></p>
+                <p>
+                    Desenvolvimento de uma página responsiva utilizando HTML semântico,
+                    folhas de estilo e JavaScript.
+                </p>
+            </article>
+        </section>
+
+        <section id="habilidades" class="cartao">
+            <h2>Habilidades</h2>
+            <!-- Cria uma lista não ordenada; cada li representa uma habilidade -->
+            <ul class="lista-habilidades">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Git e GitHub</li>
+                <li>Trabalho em equipe</li>
+            </ul>
+        </section>
+
+        <section id="contato" class="cartao">
+            <h2>Contato</h2>
+            <!-- Identifica semanticamente o bloco de informações de contato -->
+            <address>
+                <!-- mailto: solicita a abertura do aplicativo de e-mail -->
+                <p>E-mail: <a href="mailto:ana@email.com">ana@email.com</a></p>
+                <p>
+                    LinkedIn:
+                    <!-- Abre o LinkedIn em outra aba sem dar acesso à página original -->
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        linkedin.com/in/ana-silva
+                    </a>
+                </p>
+                <p>
+                    GitHub:
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                        github.com/ana-silva
+                    </a>
+                </p>
+            </address>
+
+            <!-- Cria o botão que será identificado e controlado pelo JavaScript -->
+            <button id="botao-contato" type="button">Exibir mensagem</button>
+            <!-- Reserva espaço para a mensagem; aria-live anuncia mudanças ao leitor de tela -->
+            <p id="mensagem-contato" class="mensagem" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <!-- O JavaScript preencherá o span com o ano atual -->
+        <p>&copy; <span id="ano-atual"></span> Ana Silva. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Conecta o arquivo JavaScript ao final da página -->
+    <script src="js/script.js"></script>
+</body>
+</html>
